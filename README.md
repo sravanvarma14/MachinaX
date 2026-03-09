@@ -1,5 +1,7 @@
 # MachinaX - AI Manufacturing Dashboard
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/new?repository=sravanvarma14/MachanaX&branch=main&main_module=manuf-ai-dashboard/app.py)
+
 MachinaX is a premium AI-driven dashboard for manufacturing process monitoring, predictive analytics, and quality control. It provides real-time insights into production performance, equipment health, and quality outcomes.
 
 ## 🚀 Features
