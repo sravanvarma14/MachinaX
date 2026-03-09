@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 import plotly.express as px
 
-st.set_page_config(page_title="AI Manufacturing Intelligence", layout="wide")
+st.set_page_config(page_title="MachinaX | AI Manufacturing Intelligence", layout="wide", page_icon="🏭")
 
 # Load the comprehensive model
 @st.cache_resource
@@ -14,11 +14,32 @@ def load_model():
 try:
     model = load_model()
 except Exception as e:
-    st.error(f"Error loading model: {e}")
-    st.stop()
+    # Try looking in parent dir if not found (for local dev)
+    try:
+        model = joblib.load("../ai_manufacturing_model.pkl")
+    except:
+        st.error(f"Error loading model: {e}")
+        st.stop()
 
-st.title("🏭 AI-Driven Manufacturing Intelligence System")
-st.markdown("Real-time Production Monitoring & Comprehensive Quality Prediction")
+# Branding Section
+col_logo, col_title = st.columns([1, 5])
+with col_logo:
+    try:
+        # Check if logo exists in same dir or parent
+        import os
+        logo_path = "machinax_logo_1772994006646.png"
+        if not os.path.exists(logo_path):
+            logo_path = "../machinax_logo_1772994006646.png"
+        st.image(logo_path, width=100)
+    except:
+        pass 
+
+with col_title:
+    st.title("MachinaX")
+    st.markdown("### Predict • Optimize • Perform")
+    st.markdown("*Real-time Production Monitoring & Comprehensive Quality Prediction*")
+
+st.divider()
 
 # Sidebar inputs
 st.sidebar.header("Production Parameters")

@@ -5,3 +5,5 @@ scikit-learn
 joblib
 google-generativeai
 python-multipart
+streamlit
+plotly
