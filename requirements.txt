@@ -1,11 +1,8 @@
-streamlit
-pandas
+fastapi
+uvicorn
 numpy
+joblib
 scikit-learn
+pandas
 xgboost
-google-generativeai
-openai
-pymupdf
-python-docx
-matplotlib
-plotly
+python-multipart
