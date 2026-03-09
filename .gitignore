@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pkl
+Untitled9.ipynb
+**/node_modules/
+**/dist/
+**/dist-ssr/
+*.log
+error.txt
+.DS_Store
+logs/
